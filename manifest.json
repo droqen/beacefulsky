@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Beaceful Sky",
+    "description": "makes bluesky more beaceful",
+    "version": "1.0",
+    "action": {
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions": [
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://bsky.app/*"
+            ],
+            "js": [
+                "beace.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
